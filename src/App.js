@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
+import Formulaire from "./Component/Formulaire"
+import Message from "./Component/Message"
 
 function App () {
   
     return (
       <div className='box'>
-        <h2>warzazate</h2>
+        <div className="messages">
+          <Message/>
+          <Message/>
+        </div>
+        <Formulaire/>
       </div>
     );
   }
