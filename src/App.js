@@ -7,8 +7,8 @@ function App (props) {
 
   const [messages, setmessages] = useState({})
   const [pseudo, setPseudo] = useState(props.match.params.pseudo)
+ 
 
-console.log(pseudo)
   const addMessage = (message)=>{
     const msg= {...messages}
     msg[`message-${Date.now()}`] = message
@@ -20,7 +20,7 @@ console.log(pseudo)
           <Message/>
           <Message/>
         </div>
-        <Formulaire pseudo={pseudo} addMessage={addMessage}/>
+        <Formulaire length="150" pseudo={pseudo} addMessage={addMessage}/>
       </div>
     );
   }
