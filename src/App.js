@@ -14,11 +14,24 @@ function App (props) {
     msg[`message-${Date.now()}`] = message
     setmessages(msg)
   }
+
+  const leMessage = Object.keys(messages)
+  .map(key => (
+    <Message 
+      key={key}
+      message={messages[key].message}
+      pseudo= {pseudo[key]}  />)
+  )
+ 
+
     return (
       <div className='box'>
         <div className="messages">
           <Message/>
           <Message/>
+        </div>
+        <div className ="message">
+          {leMessage}
         </div>
         <Formulaire length="150" pseudo={pseudo} addMessage={addMessage}/>
       </div>
